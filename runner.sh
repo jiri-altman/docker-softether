@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Set timezone as specified in /config/etc/timezone
+dpkg-reconfigure -f noninteractive tzdata
+
 if [ ! -d "/var/log/vpnserver/security_log" ]; then
   mkdir -p /var/log/vpnserver/security_log
 fi
